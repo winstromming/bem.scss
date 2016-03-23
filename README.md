@@ -24,7 +24,7 @@ Within your `.scss` files, import the `_bem.scss` file and use the mixin with `@
 }
 ```
 
-*Output:*
+**Output:**
 
 ```css
 .block {}
@@ -60,7 +60,7 @@ Using mixin structures like these enable us to avoid the repetition common to wr
 }
 ```
 
-*Output:**
+**Output:**
 
 ```css
 .text,
@@ -119,7 +119,7 @@ You can introduce media queries into any section of the syntax and proper inheri
 }
 ```
 
-*Output*:
+**Output:**
 
 ```css
 .text,
@@ -198,7 +198,7 @@ This mixin structure does not allow you to nest elements within other elements, 
 }
 ```
 
-*Output:*
+**Output:**
 
 ```css
 .text,
