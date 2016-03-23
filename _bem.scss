@@ -1,0 +1,35 @@
+$bem_separator_element: '__';
+$bem_separator_modifier: '--';
+
+@mixin block($bem_item) {
+  .#{$bem_item} {
+    @content;
+  }
+}
+
+@mixin element($bem_item) {
+  $bem_parent: &;
+  $bem_is_parent: str-index('#{$bem_parent}', '#{$bem_separator_modifier}');
+  @if $bem_is_parent != null {
+    $bem_parent_without_modifier: str-slice(#{$bem_parent}, 0, $bem_is_parent - 1);
+    #{$bem_parent_without_modifier}#{$bem_separator_element}#{$bem_item} {
+      @content;
+    }
+  } @else {
+    @at-root {
+      #{&}#{$bem_separator_element}#{$bem_item} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin modifier($bem_item) {
+  $bem_parent: &;
+  @at-root {
+    #{&}#{$bem_separator_modifier}#{$bem_item} {
+      @content;
+      @extend #{$bem_parent};
+    }
+  }
+}
