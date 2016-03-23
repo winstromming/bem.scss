@@ -2,7 +2,7 @@
 
 These helpers are designed to enable developers to well-structured and consistent [BEM](https://en.bem.info/) components with SCSS. BEM stands for `"block__element--modifier"` and describes a classname syntax structure designed to keep code modular.
 
-*Contents:*
+**Contents:**
 
 1. [Usage](#usage)
 2. [Advanced Usage](#advanced-usage)
