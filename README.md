@@ -8,7 +8,7 @@ Elements can be nested within other Elements and Modifiers; both which reside wi
 
 Within your `.scss` files, import the `_bem.scss` file and use the mixin with `@include`:
 
-```
+```scss
 @import 'bem';
 
 @include block('block') {
@@ -21,7 +21,7 @@ Within your `.scss` files, import the `_bem.scss` file and use the mixin with `@
 
 *Output:*
 
-```
+```css
 .block {}
   .block__element {}
   .block--modifier {}
@@ -31,7 +31,7 @@ Within your `.scss` files, import the `_bem.scss` file and use the mixin with `@
 
 Using mixin structures like these enable us to avoid the repetition common to writing BEM syntax. We could nest modifiers within elements and they will get parsed and inherited correctly by any modifiers in the parent block.
 
-```
+```scss
 @include block('text') {
 
   padding-left: 1em;
@@ -57,7 +57,7 @@ Using mixin structures like these enable us to avoid the repetition common to wr
 
 *Output:**
 
-```
+```css
 .text,
 .text--left,
 .text--right {
@@ -86,7 +86,7 @@ Using mixin structures like these enable us to avoid the repetition common to wr
 
 You can introduce media queries into any section of the syntax and proper inheritance will be exposed when compiling. For example:
 
-```
+```scss
 @include block('text') {
 
   padding-left: 1em;
@@ -116,7 +116,7 @@ You can introduce media queries into any section of the syntax and proper inheri
 
 *Output*:
 
-```
+```css
 .text,
 .text--left,
 .text--right {
@@ -161,7 +161,7 @@ You can introduce media queries into any section of the syntax and proper inheri
 
 This mixin structure does not allow you to nest elements within other elements, or modifiers within other modifiers. That's not what BEM is for! You can absolutely put elements within modifiers, though, and inheritance will be correctly preserved:
 
-```
+```scss
 @include block('text') {
 
   padding-left: 1em;
@@ -195,7 +195,7 @@ This mixin structure does not allow you to nest elements within other elements, 
 
 *Output:*
 
-```
+```css
 .text,
 .text--left,
 .text--right {
