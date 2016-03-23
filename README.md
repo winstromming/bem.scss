@@ -6,8 +6,8 @@ These helpers are designed to enable developers to well-structured and consisten
 
 1. [Usage](#usage)
 2. [Advanced Usage](#advanced-usage)
-1. [Media Queries and Inheritance](#media-queries-and-inheritance)
-1. [Nested Elements or Modifiers](#nested-elements-or-modifiers)
+3. [Media Queries and Inheritance](#media-queries-and-inheritance)
+4. [Nested Elements or Modifiers](#nested-elements-or-modifiers)
 
 ## Usage
 
