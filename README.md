@@ -1,8 +1,13 @@
 # BEM.scss
 
-These helpers are designed to enable developers to well-structured and consistent BEM components with SCSS. BEM stands for `"block__element--modifier"` and describes a classname syntax structure designed to keep code modular.
+These helpers are designed to enable developers to well-structured and consistent [BEM](https://en.bem.info/) components with SCSS. BEM stands for `"block__element--modifier"` and describes a classname syntax structure designed to keep code modular.
 
-Elements can be nested within other Elements and Modifiers; both which reside within a parent Block statement.
+*Contents:*
+
+1. [Usage](#usage)
+2. [Advanced Usage](#advanced-usage)
+1. [Media Queries and Inheritance](#media-queries-and-inheritance)
+1. [Nested Elements or Modifiers](#nested-elements-or-modifiers)
 
 ## Usage
 
@@ -157,9 +162,9 @@ You can introduce media queries into any section of the syntax and proper inheri
   }
 ```
 
-## Nesting elements or modiiers
+## Nested Elements or Modifiers
 
-This mixin structure does not allow you to nest elements within other elements, or modifiers within other modifiers. That's not what BEM is for! You can absolutely put elements within modifiers, though, and inheritance will be correctly preserved:
+This mixin structure does not allow you to nest elements within other elements, or modifiers within other modifiers. [That's not what BEM is for](https://en.bem.info/faq/#why-does-bem-not-recommend-using-elements-within-elements-block__elem1__elem2). You can absolutely put elements within modifiers, though, and inheritance will be correctly preserved:
 
 ```scss
 @include block('text') {
