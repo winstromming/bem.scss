@@ -29,7 +29,7 @@ $bem_separator_modifier: '--';
   @at-root {
     #{&}#{$bem_separator_modifier}#{$bem_item} {
       @content;
-      @extend #{$bem_parent};
+      @extend #{$bem_parent} !optional;
     }
   }
 }
